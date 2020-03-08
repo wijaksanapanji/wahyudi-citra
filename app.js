@@ -3,7 +3,7 @@ window.addEventListener("onload", function() {
   backsound.play();
 });
 
-let date = new Date(2020, 4, 10).getTime();
+let date = new Date("April 10, 2020").getTime();
 
 const countdown = setInterval(function() {
   let now = new Date().getTime();
