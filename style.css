@@ -1,0 +1,350 @@
+@import url("https://fonts.googleapis.com/css?family=Dancing+Script:400,700|Spartan&display=swap");
+
+:root {
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Spartan", sans-serif;
+  background-color: #f9f9f9;
+  /* font-family: "Dancing Script", cursive; */
+}
+
+.paralax {
+  position: relative;
+  height: 768px;
+  width: 100%;
+  background-image: url(images/image-8.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  color: #ffffff;
+}
+
+.paralax::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.paralax .caption {
+  margin-bottom: 5rem;
+  z-index: 2;
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+}
+
+.paralax .caption .title {
+  font-size: 5rem;
+  margin-top: 1rem;
+}
+
+.paralax .caption .divider {
+  margin-bottom: 1rem;
+}
+
+.paralax .caption .subtitle {
+  font-size: 2rem;
+}
+
+.paralax .caption .date {
+  font-size: 1.2rem;
+  font-family: "Spartan", sans-serif !important;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.opening {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 5rem;
+  max-width: 600px;
+}
+
+.opening .title {
+  color: #00418b;
+  font-size: 3rem;
+  font-family: "Dancing Script", cursive;
+  margin-bottom: 1rem;
+}
+
+.opening .divider {
+  width: 60%;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+.couple {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.couple .couple-photo {
+  width: 400px;
+  height: 400px;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+.couple .info {
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.couple .info h2 {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.couple .info p {
+  font-size: 0.8rem;
+}
+
+.info img {
+  height: 250px;
+}
+
+.man {
+  margin-right: 2rem;
+}
+
+.woman {
+  margin-left: 2rem;
+}
+
+.event-date {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.event-date h1 {
+  color: #00418b;
+  font-size: 2rem;
+  font-family: "Dancing Script", cursive;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.event-date .time {
+  color: #00418b;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.maps {
+  margin-top: 2rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.maps a {
+  margin-bottom: 2rem;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #00418b;
+  color: #ffffff;
+  padding: 16px 30px;
+  transition: opacity 0.4s;
+}
+
+.maps a:hover {
+  opacity: 0.5;
+}
+
+.maps a img {
+  width: 1rem;
+  margin-left: 0.5rem;
+}
+
+.closing {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 5rem;
+  max-width: 600px;
+}
+
+.closing .title {
+  color: #00418b;
+  font-size: 3rem;
+  font-family: "Dancing Script", cursive;
+  margin-top: 1rem;
+}
+
+.closing .divider {
+  transform: scale(-1);
+  width: 60%;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+.gallery {
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
+.gallery h1 {
+  font-family: "Dancing Script", cursive;
+  color: #00418b;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0.25rem;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 50%;
+  max-width: 50%;
+  padding: 0 0.25rem;
+}
+
+.img-container {
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.column img {
+  vertical-align: middle;
+  width: 100%;
+  transition: transform 1s ease-in-out;
+}
+
+.img-container img:hover {
+  transform: scale(1.2);
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .paralax {
+    background-image: url(images/image-8.jpeg);
+    height: 100vh;
+  }
+
+  .paralax .caption .divider {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .couple {
+    flex-direction: column;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .couple .info {
+    flex-direction: column;
+  }
+
+  .couple-photo {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .man {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .woman {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+
+  .opening,
+  .closing {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .opening p,
+  .closing p {
+    line-height: 1.5rem;
+  }
+
+  .event-date {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .maps {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .gallery {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  footer .author {
+    margin-bottom: 1rem;
+  }
+}
+
+footer {
+  margin-left: 4rem;
+  margin-right: 4rem;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: #949494;
+}
+
+footer a {
+  text-decoration: none;
+  color: #00418b;
+}
+
+footer .attribution {
+  font-size: 0.7rem;
+}
