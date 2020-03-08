@@ -348,3 +348,10 @@ footer a {
 footer .attribution {
   font-size: 0.7rem;
 }
+
+.backsound {
+  position: absolute;
+  z-index: 3;
+  bottom: 1rem;
+  left: 1rem;
+}
